@@ -37,22 +37,46 @@
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 40px;
-        margin: 40px;
-
-        /* CSS GRID */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: 250px 100px 200px 50px; */
+        /* grid-template-rows: 1fr 2fr; */
+        grid-template-rows: repeat(4, 1fr);
+        /* gap: 10px; */
+        column-gap: 20px;
+        row-gap: 20px;
+        height: 500px;
+        width: 700px;
+        display: none;
       }
 
       .container--2 {
-        /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
-
-        width: 1000px;
+        margin: 40px;
+        width: 700px;
         height: 600px;
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
 
-        /* CSS GRID */
+        align-content: center;
+        justify-content: end;
+
+        align-items: center;
+        justify-items: start;
+      }
+
+      .el--3 {
+        align-self: end;
+        justify-self: end;
+      }
+
+      .el--6 {
+        justify-self: start;
+        align-self: flex-start;
       }
     </style>
   </head>

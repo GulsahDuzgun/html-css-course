@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
     <style>
+      .el {
+        /* flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 300px; */
+        flex: 0 0 25px;
+      }
+
       .el--1 {
         background-color: blueviolet;
+        align-self: end;
+        order: 1;
       }
       .el--2 {
         background-color: orangered;
@@ -15,32 +24,44 @@
       .el--3 {
         background-color: green;
         height: 150px;
+        flex-shrink: 3;
       }
       .el--4 {
         background-color: goldenrod;
+        align-self: flex-start;
       }
       .el--5 {
         background-color: palevioletred;
+        order: 2;
       }
       .el--6 {
         background-color: steelblue;
+        align-self: center;
+        order: -1;
       }
       .el--7 {
         background-color: yellow;
       }
       .el--8 {
         background-color: crimson;
+        padding: 10px;
       }
 
       .container {
-        /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 40px;
         margin: 40px;
-
-        /* FLEXBOX */
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 20px;
       }
+
+      /*
+      flex -> flex-grow flex-shrink flex-basis
+      flex: 0 1 auto;
+      */
     </style>
   </head>
   <body>
